@@ -1,4 +1,4 @@
-FROM php:7.3-fpm
+FROM php:7.2-fpm
 
 USER root
 
@@ -42,5 +42,5 @@ COPY . /var/www
 USER www-data
 
 # Expose port 9000 and start php-fpm server
-EXPOSE 7788
+EXPOSE 9000
 CMD ["php-fpm"]
