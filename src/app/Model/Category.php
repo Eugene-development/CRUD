@@ -32,6 +32,6 @@ class Category extends Model
 
     public function seo()
     {
-        return $this->morphMany(Seo::class, 'tagable');
+        return $this->morphOne(Seo::class, 'tagable');
     }
 }

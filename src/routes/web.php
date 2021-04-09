@@ -28,7 +28,7 @@
 //});
 
 $router->group(['namespace' => 'Navigation\Menu'], function() use ($router) {
-    $router->get('/get-all-menu', 'MenuController@getAll');
+    $router->get('/get-all-menu', 'MenuController@getAllHm');
 
     $router->post('/add-menu', 'MenuController@add');
     $router->put('/update-menu', 'MenuController@update');

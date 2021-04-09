@@ -12,6 +12,8 @@ class MenuRepository extends Repository implements Menu
     protected $path = 'Factory\Navigation\Menu';
 
     protected $serviceAll;
+    protected $serviceAllHm;
+
     protected $serviceCreate;
     protected $serviceUpdate;
     protected $serviceDelete;
@@ -19,6 +21,8 @@ class MenuRepository extends Repository implements Menu
     public function __construct()
     {
         $this->serviceAll = app('App\Http\Services\\' . $this->path . '\ServiceAll');
+        $this->serviceAllHm = app('App\Http\Services\\' . $this->path . '\ServiceAllHm');
+
         $this->serviceCreate = app('App\Http\Services\\' . $this->path . '\ServiceCreate');
         $this->serviceUpdate = app('App\Http\Services\\' . $this->path . '\ServiceUpdate');
         $this->serviceDelete = app('App\Http\Services\\' . $this->path . '\ServiceDelete');
