@@ -56,7 +56,8 @@ $router->group(['namespace' => 'Navigation\Rubric'], function() use ($router) {
 });
 
 $router->group(['namespace' => 'Navigation\Category'], function() use ($router) {
-    $router->get('/get-all-category', 'CategoryController@getAll');
+    $router->get('/get-all-category-seo', 'CategoryController@getAllHm');
+    $router->get('/get-category-seo/{id}', 'CategoryController@getWhHm');
 
     $router->post('/add-category', 'CategoryController@add');
     $router->put('/update-category', 'CategoryController@update');
